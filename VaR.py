@@ -51,7 +51,9 @@ def SourceHistoricPrices():
     # Set Up for Tiingo
     config = {}
     config['session'] = True
-    config['api_key'] = '<insert API Key from Tiingo>'
+    file = open("API Code", "r")
+    code = file.read()
+    config['api_key'] = code
     client = TiingoClient(config)
     # Create a list of tickers for the API call
     Tickers = []
